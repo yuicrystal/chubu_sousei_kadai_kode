@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
   
+   
+  
   <script>
       function start () {
           document.getElementById("start_wh").style["display"] = "none";
@@ -130,8 +132,8 @@ angular.module('myApp', [])
           + data.weather[0].icon +'.png';
         $scope.name = data.weather[0].main; 
         $scope.temp = data.main.temp +'℃';
-         $scope.temp_min = data.main.temp_min +'℃';
-          $scope.temp_max = data.main.temp_max +'℃';
+         $scope.temp_min = '最低気温  '+data.main.temp_min +'℃';
+          $scope.temp_max = '最高気温  '+data.main.temp_max +'℃';
       })
       .error(function(err) {
         console.log(err);
